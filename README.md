@@ -56,6 +56,8 @@ If your IDE doesn't do it automatically, type:
 Import the package in your `dart` file and use `Icon` to get the actual icon widget:
 
 ```dart
+import 'package:line_icons/line_icons.dart';
+...
 Icon _icon = Icon(LineIcons.code);
 ```
 
