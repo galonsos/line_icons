@@ -53,7 +53,7 @@ If your IDE doesn't do it automatically, type:
 
 Include the font also in the `pubspec.yaml`, under the `flutter` section
 
-```dart
+```yaml
 flutter:
   fonts:
       - family: LineIcons
