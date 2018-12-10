@@ -1,4 +1,5 @@
-# <img src="https://flutter.io/images/flutter-mark-square-100.png" alt="Flutter" width="40" height="40" /> LineIcons
+<img src="https://flutter.io/images/flutter-mark-square-100.png" alt="Flutter" width="40" height="40" /> 
+# LineIcons
 
 # Just another bunch of beautiful icons to use
 
