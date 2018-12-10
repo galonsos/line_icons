@@ -59,6 +59,7 @@ Import the package in your `dart` file and use `Icon` to get the actual icon wid
 import 'package:line_icons/line_icons.dart';
 ...
 Icon _icon = Icon(LineIcons.code);
+...
 ```
 
 **Sample**
