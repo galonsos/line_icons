@@ -47,10 +47,20 @@ dependencies:
     sdk: flutter
   url_launcher: ^0.1.0
 ```
-
 If your IDE doesn't do it automatically, type:
 
 `flutter packages get`
+
+Include the font also in the `pubspec.yaml`, under the `flutter` section
+
+```dart
+flutter:
+  fonts:
+      - family: LineIcons
+        fonts:
+          - asset: packages/line_icons/assets/fonts/LineIcons.ttf
+            weight: 400
+```
 
 **Using**
 
