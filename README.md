@@ -47,6 +47,10 @@ dependencies:
   url_launcher: ^0.1.0
 ```
 
+If your IDE doesn't do it automatically, type:
+
+`flutter packages get`
+
 **Using**
 
 Import the package in your `dart` file and use `Icon` to get the actual icon widget:
