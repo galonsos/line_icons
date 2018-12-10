@@ -113,4 +113,4 @@ class _MyHomePageState extends State<MyHomePage> {
 
 ## GitHub source code
 
-If you're interested on the code (feel free to modify it anyway you want), you can find it here: (https://github.com/galonsos/line_icons)
+If you're interested on the code (feel free to modify it anyway you want), you can find it here: https://github.com/galonsos/line_icons
