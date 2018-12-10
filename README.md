@@ -13,7 +13,7 @@ who decided not keeping the icons for themselves and helping others with a piece
 
 So, thank you [Icons8](https://icons8.com/line-awesome) and [FlutterIcon](http://fluttericon.com/)!
 
-### Documentation
+# Documentation
 
 **The font**
 
