@@ -44,7 +44,7 @@ Include `line_icons` in your `pubspec.yaml` file:
 dependencies:
   flutter:
     sdk: flutter
-  url_launcher: ^0.1.0
+  url_launcher: ^0.0.1
 ```
 
 If your IDE doesn't do it automatically, type:
