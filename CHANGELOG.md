@@ -14,3 +14,6 @@ The first release was fine, but needed some fixes
 
 * Changelog added
 
+## [0.1.2] - January, 10 2019
+
+* No need to import the TTF manually
