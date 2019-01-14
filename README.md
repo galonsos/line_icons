@@ -1,4 +1,3 @@
-<img src="https://flutter.io/images/flutter-mark-square-100.png" alt="Flutter" width="40" height="40" /> 
 # LineIcons
 
 # Just another bunch of beautiful icons to use
@@ -45,7 +44,7 @@ Include `line_icons` in your `pubspec.yaml` file:
 dependencies:
   flutter:
     sdk: flutter
-  url_launcher: ^0.1.0
+  line_icons: ^0.2.0
 ```
 
 If your IDE doesn't do it automatically, type:
