@@ -17,3 +17,7 @@ The first release was fine, but needed some fixes
 ## [0.1.2] - January, 10 2019
 
 * No need to import the TTF manually
+
+## [0.2.0] - January, 14 2019
+
+* Added an static values property as a map <String, IconData> for the collection

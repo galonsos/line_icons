@@ -1,4 +1,3 @@
-<img src="https://flutter.io/images/flutter-mark-square-100.png" alt="Flutter" width="40" height="40" /> 
 # LineIcons
 
 # Just another bunch of beautiful icons to use
@@ -45,7 +44,7 @@ Include `line_icons` in your `pubspec.yaml` file:
 dependencies:
   flutter:
     sdk: flutter
-  url_launcher: ^0.1.0
+  line_icons: ^0.2.0
 ```
 
 If your IDE doesn't do it automatically, type:
@@ -60,6 +59,15 @@ Import the package in your `dart` file and use `Icon` to get the actual icon wid
 import 'package:line_icons/line_icons.dart';
 ...
 Icon _icon = Icon(LineIcons.code);
+...
+```
+You may also use the "values" property to retrieve a map containing every icon:
+
+```dart
+import 'package:line_icons/line_icons.dart';
+...
+Map<String, IconData> _map = LineIcons.values;
+Icon _icon = Icon(_map['code']);
 ...
 ```
 
