@@ -62,6 +62,15 @@ import 'package:line_icons/line_icons.dart';
 Icon _icon = Icon(LineIcons.code);
 ...
 ```
+You may also use the "values" property to retrieve a map containing every icon:
+
+```dart
+import 'package:line_icons/line_icons.dart';
+...
+Map<String, IconData> _map = LineIcons.values;
+Icon _icon = Icon(_map['code']);
+...
+```
 
 **Sample**
 
