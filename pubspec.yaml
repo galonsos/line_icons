@@ -1,6 +1,6 @@
 name: line_icons
 description: Another icon library, based on Awesome Line Icons (by www.icons8.com) and with the help of FlutterIcon.com
-version: 0.2.0
+version: 1.1.0
 author: Germán Alonso<galonsos@gmail.com>
 homepage: https://github.com/galonsos
 
@@ -21,4 +21,3 @@ flutter:
     - family: LineIcons
       fonts:
         - asset: lib/assets/fonts/LineIcons.ttf
-          weight: 400
