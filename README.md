@@ -13,6 +13,12 @@ who decided not keeping the icons for themselves and helping others with a piece
 
 So, thank you [Icons8](https://icons8.com/line-awesome) and [FlutterIcon](http://fluttericon.com/)!
 
+# Why an update?
+
+Well, I just noticed [Icons8](https://icons8.com/line-awesome) added some new icons and released package 1.1.0. This Flutter library needed an update therefore.
+
+Please, report any crashes, since compatibility with previous versions has not been tested. Some icons might have changed their names or be no longer available.
+
 # Documentation
 
 **The font**
@@ -44,7 +50,7 @@ Include `line_icons` in your `pubspec.yaml` file:
 dependencies:
   flutter:
     sdk: flutter
-  line_icons: ^0.2.0
+  line_icons: ^1.1.0
 ```
 
 If your IDE doesn't do it automatically, type:
@@ -59,15 +65,6 @@ Import the package in your `dart` file and use `Icon` to get the actual icon wid
 import 'package:line_icons/line_icons.dart';
 ...
 Icon _icon = Icon(LineIcons.code);
-...
-```
-You may also use the "values" property to retrieve a map containing every icon:
-
-```dart
-import 'package:line_icons/line_icons.dart';
-...
-Map<String, IconData> _map = LineIcons.values;
-Icon _icon = Icon(_map['code']);
 ...
 ```
 

@@ -21,3 +21,8 @@ The first release was fine, but needed some fixes
 ## [0.2.0] - January, 14 2019
 
 * Added an static values property as a map <String, IconData> for the collection
+
+## [1.1.0] - November, 15 2019
+
+* Changed the icons library to match Icons8 1.1.0 version
+* No values property to access icons as a map (yet)
