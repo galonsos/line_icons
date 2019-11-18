@@ -24,8 +24,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Icon _icon = Icon(LineIcons.code);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
