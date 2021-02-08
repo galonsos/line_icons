@@ -13,15 +13,30 @@ who decided not keeping the icons for themselves and helping others with a piece
 
 So, thank you [Icons8](https://icons8.com/line-awesome) and [FlutterIcon](http://fluttericon.com/)!
 
+# Apologies
+
+Yes, my fault. I left this project unattended for too long. I'm sincerely sorry. I won't promise it won't happen again, but I'll try to make it up to you with this new version.
+
 # Why an update?
 
-Well, I just noticed [Icons8](https://icons8.com/line-awesome) added some new icons and released package 1.1.0. This Flutter library needed an update therefore.
+Well, I just noticed [Icons8](https://icons8.com/line-awesome) added some new icons and released package 1.3.0. This Flutter library needed an update therefore.
 
-Please, report any crashes, since compatibility with previous versions has not been tested. Some icons might have changed their names or be no longer available.
+Previous releases were a complete mess, so I decided to do it right to the best of my knowledge building up some features you may appreciate:
+
+* Icon names are now more flutterish (camelCase instead of snake_case)
+* `values` property is provided again in LineIcons class to access `IconData` as a map
+* `LineIcon` (singular) class is provided along `LineIcons` (plural), so you can spare some code using `LineIcon.tablet()` instead of `Icon(LineIcons.tablet)`.
+* `LineIcon` constructor parameters are the same as `Icon`'s, so you may customize a `LineIcon` instance the same way. I.e., `Icon(LineIcons.px500, color: Colors.red)` is equivalent to `LineIcon.px500(color: Colors.red)` (or `Icon(LineIcons.values['px500'], color: Colors.red)`).
+
+# Warning
+
+This version is different enough from last stable one (0.1.0) to be careful: most icon names have changed, so you can consider version 1.3.0 as a whole new thing. 
+
+In a few cases, names don't exactly match those in [Icons8](https://icons8.com/line-awesome); i.e., `500px` became `px500` instead. Icons should be easily recognized, anyway.
 
 # Documentation
 
-**The font**
+**The font (v1.3.0)**
 
 * [Line Awesome font by Icons8](https://icons8.com/line-awesome)
 * [Line Awesome icon searching](https://icons8.com/line-awesome)
@@ -50,7 +65,7 @@ Include `line_icons` in your `pubspec.yaml` file:
 dependencies:
   flutter:
     sdk: flutter
-  line_icons: ^1.1.0
+  line_icons: ^1.3.0
 ```
 
 If your IDE doesn't do it automatically, type:
@@ -59,7 +74,7 @@ If your IDE doesn't do it automatically, type:
 
 **Using**
 
-Import the package in your `dart` file and use `Icon` to get the actual icon widget:
+Import the package in your Flutter file and use `Icon` to get the actual icon widget:
 
 ```dart
 import 'package:line_icons/line_icons.dart';
@@ -68,10 +83,29 @@ Icon _icon = Icon(LineIcons.code);
 ...
 ```
 
+Or choose a suitable constructor:
+
+```dart
+import 'package:line_icons/line_icon.dart';
+...
+Icon _icon = LineIcon.code();
+...
+```
+
+Or go the ugly way ;P:
+
+```dart
+import 'package:line_icons/line_icons.dart';
+...
+Icon _icon = Icon(LineIcons.values['code']);
+...
+```
+
 **Sample**
 
 ```dart
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icon.dart';
 import 'package:line_icons/line_icons.dart';
 
 void main() => runApp(MyApp());
@@ -97,6 +131,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  void Function() _doNothing = () => {};
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,13 +140,36 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Text(
-          'Awesome Line icons is great! Take a look at the floating action button :)',
+        child: Column(
+          children: [
+            Text(
+              'Awesome Line Icons is great!',
+            ),
+            Text(
+              'In version 1.3.0, there\'re some changes.',
+            ),
+            Row(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  FlatButton.icon(
+                    icon: Icon(LineIcons.desktop),
+                    label: Text('Icon(LineIcons.desktop, ...)'),
+                    onPressed: _doNothing,
+                  ),
+                  FlatButton.icon(
+                    icon: LineIcon.tablet(),
+                    label: Text('LineIcon.tablet(...)'),
+                    onPressed: _doNothing,
+                  ),
+                  FlatButton.icon(
+                    icon: Icon(LineIcons.values['mobile']),
+                    label: Text('Icon(LineIcons.values[\'mobile\'], ...)'),
+                    onPressed: _doNothing,
+                  ),
+                ]),
+          ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => {},
-        child: Icon(LineIcons.plus),
       ),
     );
   }
