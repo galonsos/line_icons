@@ -103,6 +103,15 @@ Icon _icon = Icon(LineIcons.values['code']);
 ...
 ```
 
+Or even a fancy nasty way:
+
+```dart
+import 'package:line_icons/line_icons.dart';
+...
+Icon _icon = Icon(LineIcons.byName('code'));
+...
+```
+
 **Sample**
 
 ```dart
@@ -148,7 +157,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'Awesome Line Icons is great!',
             ),
             Text(
-              'In version 1.3.0, there\'re some changes.',
+              'In version 1.3.0, there\'re some big changes. Be aware!',
             ),
             Row(
                 mainAxisSize: MainAxisSize.min,
@@ -169,7 +178,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     label: Text('Icon(LineIcons.values[\'mobile\'], ...)'),
                     onPressed: _doNothing,
                   ),
-                ]),
+                  FlatButton.icon(
+                    icon: Icon(LineIcons.byName('mobile')),
+                    label: Text('Icon(LineIcons.byName(\'mobile\'), ...)'),
+                    onPressed: _doNothing,
+                  ),
+                ],
+              ),
           ],
         ),
       ),

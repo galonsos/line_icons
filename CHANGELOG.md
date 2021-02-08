@@ -20,16 +20,22 @@ The first release was fine, but needed some fixes
 
 ## [0.2.0] - January, 14 2019
 
-* Added an static values property as a map <String, IconData> for the collection
+* Added an static `values` property as a map <String, IconData> for the collection
 
 ## [1.1.0] - November, 15 2019
 
 * Changed the icons library to match Icons8 1.1.0 version
-* No values property to access icons as a map (yet)
+* No `values` property to access icons as a map (yet)
 
 ## [1.3.0] - February, 8 2021
 
 * Changed the icons library to match Icons8 1.3.0 version
-* Values property restored
-* LineIcon class for convenient constructors
+* `values` property restored
+* `LineIcon` class for convenient constructors
 * camelCased icon names instead of snake_cased
+
+## [1.3.1] - February, 8 2021
+
+* More comments on code
+* `values` property as a getter instead of a constant
+* New `byName()` method 
