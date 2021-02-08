@@ -13,6 +13,8 @@ who decided not keeping the icons for themselves and helping others with a piece
 
 So, thank you [Icons8](https://icons8.com/line-awesome) and [FlutterIcon](http://fluttericon.com/)!
 
+(And, sure, why not: thank you Microsoft Excel! xD)
+
 # Apologies
 
 Yes, my fault. I left this project unattended for too long. I'm sincerely sorry. I won't promise it won't happen again, but I'll try to make it up to you with this new version.
