@@ -39,3 +39,7 @@ The first release was fine, but needed some fixes
 * More comments on code
 * `values` property as a getter instead of a constant
 * New `byName()` method 
+
+## [1.3.2] - February, 8 2021
+
+* Some typos corrected
