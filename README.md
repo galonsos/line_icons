@@ -1,4 +1,4 @@
-# LineIcons
+# LineIcons 1.3.2
 
 # Just another bunch of beautiful icons to use
 
@@ -32,7 +32,7 @@ Previous releases were a complete mess, so I decided to do it right to the best 
 
 # Warning
 
-This version is different enough from last stable one (0.1.0) to be careful: most icon names have changed, so you can consider version 1.3.0 as a whole new thing. 
+This version is different enough from last stable one (0.1.0) to be careful: most icon names have changed, so you can consider version 1.3.x as a whole new thing. 
 
 In a few cases, names don't exactly match those in [Icons8](https://icons8.com/line-awesome); i.e., `500px` became `px500` instead. Icons should be easily recognized, anyway.
 
@@ -67,7 +67,7 @@ Include `line_icons` in your `pubspec.yaml` file:
 dependencies:
   flutter:
     sdk: flutter
-  line_icons: ^1.3.0
+  line_icons: ^1.3.2
 ```
 
 If your IDE doesn't do it automatically, type:
@@ -157,7 +157,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'Awesome Line Icons is great!',
             ),
             Text(
-              'In version 1.3.0, there\'re some big changes. Be aware!',
+              'In version 1.3.2, there\'re some big changes. Be aware!',
             ),
             Row(
                 mainAxisSize: MainAxisSize.min,
