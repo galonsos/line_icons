@@ -26,3 +26,10 @@ The first release was fine, but needed some fixes
 
 * Changed the icons library to match Icons8 1.1.0 version
 * No values property to access icons as a map (yet)
+
+## [1.3.0] - February, 8 2021
+
+* Changed the icons library to match Icons8 1.3.0 version
+* Values property restored
+* LineIcon class for convenient constructors
+* camelCased icon names instead of snake_cased
