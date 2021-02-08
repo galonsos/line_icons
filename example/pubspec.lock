@@ -70,11 +70,9 @@ packages:
   line_icons:
     dependency: "direct main"
     description:
-      path: "."
-      ref: "1.3.0"
-      resolved-ref: d9a4a24f2d0004e8014c9b0dd6854aca9275399e
-      url: "https://github.com/galonsos/line_icons.git"
-    source: git
+      name: line_icons
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "1.3.0"
   matcher:
     dependency: transitive
