@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:line_icons/line_icons.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,6 +23,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  void Function() _doNothing = () => {};
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,13 +32,36 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Text(
-          'Awesome Line icons is great!',
+        child: Column(
+          children: [
+            Text(
+              'Awesome Line Icons is great!',
+            ),
+            Text(
+              'In version 1.3.0, there\'re some changes.',
+            ),
+            Row(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  FlatButton.icon(
+                    icon: Icon(LineIcons.desktop),
+                    label: Text('Icon(LineIcons.desktop, ...)'),
+                    onPressed: _doNothing,
+                  ),
+                  FlatButton.icon(
+                    icon: LineIcon.tablet(),
+                    label: Text('LineIcon.tablet(...)'),
+                    onPressed: _doNothing,
+                  ),
+                  FlatButton.icon(
+                    icon: Icon(LineIcons.values['mobile']),
+                    label: Text('Icon(LineIcons.values[\'mobile\'], ...)'),
+                    onPressed: _doNothing,
+                  ),
+                ]),
+          ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => {},
-        child: Icon(LineIcons.plus),
       ),
     );
   }

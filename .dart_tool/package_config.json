@@ -38,12 +38,6 @@
       "languageVersion": "2.3"
     },
     {
-      "name": "cupertino_icons",
-      "rootUri": "file:///C:/Dart/pubcache/hosted/pub.dartlang.org/cupertino_icons-0.1.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.0"
-    },
-    {
       "name": "fake_async",
       "rootUri": "file:///C:/Dart/pubcache/hosted/pub.dartlang.org/fake_async-1.1.0",
       "packageUri": "lib/",
@@ -134,13 +128,13 @@
       "languageVersion": "2.0"
     },
     {
-      "name": "line_icons_demo",
+      "name": "line_icons",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     }
   ],
-  "generated": "2021-02-08T15:23:55.591672Z",
+  "generated": "2021-02-08T15:23:54.948940Z",
   "generator": "pub",
   "generatorVersion": "2.9.0-19.0.dev.flutter-63cf56d925"
 }
