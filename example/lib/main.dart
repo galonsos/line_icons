@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:line_icons/line_icons.dart';
 
 void main() => runApp(MyApp());
 
@@ -42,3 +41,5 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+class LineIcons {}
