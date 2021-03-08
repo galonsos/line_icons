@@ -10831,6 +10831,6 @@ class LineIcons {
   /// Returns the IconData associated to the symbol name.
   /// Case insensitive
   /// If the icon name is not present, it returns null
-  static IconData byName(String iconName) =>
+  static IconData? byName(String iconName) =>
       _lowerValues[iconName.toLowerCase()];
 }
