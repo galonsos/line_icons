@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
+
   final String title;
 
   @override
@@ -25,44 +26,60 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  void Function() _doNothing = () => {};
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            Text(
-              'Awesome Line Icons is great!',
-            ),
-            Text(
-              'In version 1.3.0, there\'re some changes.',
-            ),
-            Row(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  FlatButton.icon(
-                    icon: Icon(LineIcons.desktop),
-                    label: Text('Icon(LineIcons.desktop, ...)'),
-                    onPressed: _doNothing,
-                  ),
-                  FlatButton.icon(
-                    icon: LineIcon.tablet(),
-                    label: Text('LineIcon.tablet(...)'),
-                    onPressed: _doNothing,
-                  ),
-                  FlatButton.icon(
-                    icon: Icon(LineIcons.values['mobile']),
-                    label: Text('Icon(LineIcons.values[\'mobile\'], ...)'),
-                    onPressed: _doNothing,
-                  ),
-                ]),
-          ],
+      body: Padding(
+        padding: const EdgeInsets.all(32),
+        child: Center(
+          child: Column(
+            children: [
+              Text(
+                'Awesome Line Icons is great!',
+              ),
+              Text(
+                'In version 2.0.0, we got to null safety 🎉',
+              ),
+              const SizedBox(height: 16),
+              Text(
+                'Look bellow for some examples 😎',
+              ),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    TextButton.icon(
+                      style: TextButton.styleFrom(
+                        padding: EdgeInsets.all(16),
+                      ),
+                      icon: Icon(LineIcons.desktop),
+                      label: Text('Icon(LineIcons.desktop, ...)'),
+                      onPressed: () {},
+                    ),
+                    TextButton.icon(
+                      style: TextButton.styleFrom(
+                        padding: EdgeInsets.all(16),
+                      ),
+                      icon: LineIcon.tablet(),
+                      label: Text('LineIcon.tablet(...)'),
+                      onPressed: () {},
+                    ),
+                    TextButton.icon(
+                      style: TextButton.styleFrom(
+                        padding: EdgeInsets.all(16),
+                      ),
+                      icon: Icon(LineIcons.values['mobilePhone']),
+                      label: Text("Icon(LineIcons.values['mobilePhone'], ...)"),
+                      onPressed: () {},
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
