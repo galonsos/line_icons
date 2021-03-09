@@ -43,3 +43,9 @@ The first release was fine, but needed some fixes
 ## [1.3.2] - February, 8 2021
 
 * Some typos corrected
+
+## [2.0.0] - March, 9 2021
+
+* Null-safety migration
+* `readme.md` updated
+

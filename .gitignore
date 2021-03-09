@@ -3,3 +3,5 @@ pubspec.lock
 .vscode/settings.json
 .dart_tool/package_config.json
 .dart_tool/package_config.json
+.packages
+.gitignore

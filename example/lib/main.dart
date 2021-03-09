@@ -25,8 +25,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  void Function() _doNothing = () => {};
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,31 +35,38 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             Text(
-              'Awesome Line Icons is great!',
+              'Awesome Line Icons are great!',
             ),
             Text(
-              'In version 1.3.0, there\'re some changes.',
+              'Version 2.0.0 goes null-safe!',
             ),
             Row(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  FlatButton.icon(
-                    icon: Icon(LineIcons.desktop),
-                    label: Text('Icon(LineIcons.desktop, ...)'),
-                    onPressed: _doNothing,
-                  ),
-                  FlatButton.icon(
-                    icon: LineIcon.tablet(),
-                    label: Text('LineIcon.tablet(...)'),
-                    onPressed: _doNothing,
-                  ),
-                  FlatButton.icon(
-                    icon: Icon(LineIcons.values['mobile']),
-                    label: Text('Icon(LineIcons.values[\'mobile\'], ...)'),
-                    onPressed: _doNothing,
-                  ),
-                ]),
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    // Using LineIcons the standard way: injecting the IconData into the Icon object
+                    Icon(LineIcons.desktop),
+                    Text('Icon(LineIcons.desktop, ...)'),
+                  ],
+                ),
+                Column(
+                  children: [
+                    // Using LineIcon (no 's') for concision. It returns an Icon object
+                    LineIcon.tablet(),
+                    Text('LineIcon.tablet(...)'),
+                  ],
+                ),
+                Column(
+                  children: [
+                    // Using LineIcons the nasty way: passing the IconData via the values map
+                    Icon(LineIcons.values['mobile']),
+                    Text('Icon(LineIcons.values[\'mobile\'], ...)'),
+                  ],
+                ),
+              ],
+            ),
           ],
         ),
       ),

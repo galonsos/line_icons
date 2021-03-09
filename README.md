@@ -6,35 +6,35 @@ I love Material icons. I really do. But, somehow, I suddenly felt tired of them.
 
 Yeah, what a wonderful world and so on, but, writing down all those nasty codes into Dart constants? No way!
 
-And [FlutterIcon](http://fluttericon.com/) just came out of the blue! It made all the dirty work for me.
+And [FlutterIcon]( https://fluttericon.com/) just came out of the blue! It made all the dirty work for me.
 
 I started to use this library in my projects, and they really seemed nice. So I asked to myself: why not publishing it for others to enjoy? After all, in all this process, I was indeed assisted by many people 
 who decided not keeping the icons for themselves and helping others with a piece of software they had no need to share with me or anyone else.
 
-So, thank you [Icons8](https://icons8.com/line-awesome) and [FlutterIcon](http://fluttericon.com/)!
+So, thank you [Icons8](https://icons8.com/line-awesome) and [FlutterIcon]( https://fluttericon.com/)!
 
 (And, sure, why not: thank you Microsoft Excel! xD)
 
-# Apologies
+# Null safety
 
-Yes, my fault. I left this project unattended for too long. I'm sincerely sorry. I won't promise it won't happen again, but I'll try to make it up to you with this new version.
+Here we are. Starting at version 2.0.0, LineIcons will be null-safe, as suggested by the Dart team.
 
-# Why an update?
+Just in case you might be interested: [Null-safety](https://dart.dev/null-safety).
 
-Well, I just noticed [Icons8](https://icons8.com/line-awesome) added some new icons and released package 1.3.0. This Flutter library needed an update therefore.
+# Features
 
-Previous releases were a complete mess, so I decided to do it right to the best of my knowledge building up some features you may appreciate:
-
-* Icon names are now more flutterish (camelCase instead of snake_case)
-* `values` property is provided again in LineIcons class to access `IconData` as a map
+* Null-safe package (SDK >= `2.12.0`)
+* Flutterish icon names (*camelCase* names instead of *snake_case* ones)
+* `values` property is provided in LineIcons class to access `IconData` as a map. I.e., `Icon(LineIcons.values['code'])`. 
+* `byName` property is also available to access the `IconData` related to the icon name passed as parameter. I.e., `Icon(LineIcons.byName('desktop'))`.
 * `LineIcon` (singular) class is provided along `LineIcons` (plural), so you can spare some code using `LineIcon.tablet()` instead of `Icon(LineIcons.tablet)`.
 * `LineIcon` constructor parameters are the same as `Icon`'s, so you may customize a `LineIcon` instance the same way. I.e., `Icon(LineIcons.px500, color: Colors.red)` is equivalent to `LineIcon.px500(color: Colors.red)` (or `Icon(LineIcons.values['px500'], color: Colors.red)`).
 
 # Warning
 
-This version is different enough from last stable one (0.1.0) to be careful: most icon names have changed, so you can consider version 1.3.x as a whole new thing. 
-
 In a few cases, names don't exactly match those in [Icons8](https://icons8.com/line-awesome); i.e., `500px` became `px500` instead. Icons should be easily recognized, anyway.
+
+Please, be aware: version 2.0.0 and above will be null-safe
 
 # Documentation
 
@@ -45,7 +45,7 @@ In a few cases, names don't exactly match those in [Icons8](https://icons8.com/l
 
 **From the font to the class**
 
-* [Converting icon fonts into Flutter classes](http://fluttericon.com/)
+* [Converting icon fonts into Flutter classes](https://fluttericon.com/)
 
 **From the class to the package**
 
@@ -67,7 +67,7 @@ Include `line_icons` in your `pubspec.yaml` file:
 dependencies:
   flutter:
     sdk: flutter
-  line_icons: ^1.3.2
+  line_icons: ^2.0.0
 ```
 
 If your IDE doesn't do it automatically, type:
@@ -142,8 +142,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  void Function() _doNothing = () => {};
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -154,37 +152,38 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             Text(
-              'Awesome Line Icons is great!',
+              'Awesome Line Icons are great!',
             ),
             Text(
-              'In version 1.3.2, there\'re some big changes. Be aware!',
+              'Version 2.0.0 goes null-safe!',
             ),
             Row(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  FlatButton.icon(
-                    icon: Icon(LineIcons.desktop),
-                    label: Text('Icon(LineIcons.desktop, ...)'),
-                    onPressed: _doNothing,
-                  ),
-                  FlatButton.icon(
-                    icon: LineIcon.tablet(),
-                    label: Text('LineIcon.tablet(...)'),
-                    onPressed: _doNothing,
-                  ),
-                  FlatButton.icon(
-                    icon: Icon(LineIcons.values['mobile']),
-                    label: Text('Icon(LineIcons.values[\'mobile\'], ...)'),
-                    onPressed: _doNothing,
-                  ),
-                  FlatButton.icon(
-                    icon: Icon(LineIcons.byName('mobile')),
-                    label: Text('Icon(LineIcons.byName(\'mobile\'), ...)'),
-                    onPressed: _doNothing,
-                  ),
-                ],
-              ),
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    // Using LineIcons the standard way: injecting the IconData into the Icon object
+                    Icon(LineIcons.desktop),
+                    Text('Icon(LineIcons.desktop, ...)'),
+                  ],
+                ),
+                Column(
+                  children: [
+                    // Using LineIcon (no 's') for concision. It returns an Icon object
+                    LineIcon.tablet(),
+                    Text('LineIcon.tablet(...)'),
+                  ],
+                ),
+                Column(
+                  children: [
+                    // Using LineIcons the nasty way: passing the IconData via the values map
+                    Icon(LineIcons.values['mobile']),
+                    Text('Icon(LineIcons.values[\'mobile\'], ...)'),
+                  ],
+                ),
+              ],
+            ),
           ],
         ),
       ),
