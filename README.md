@@ -1,4 +1,4 @@
-# LineIcons 2.0.0
+# LineIcons 2.0.1
 
 # Just another bunch of beautiful icons to use
 

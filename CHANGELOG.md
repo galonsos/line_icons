@@ -49,3 +49,6 @@ The first release was fine, but needed some fixes
 * Null-safety migration
 * `readme.md` updated
 
+## [2.0.1] - March, 9 2021
+
+* `readme.md` updated; I forgot to change the version in the header
