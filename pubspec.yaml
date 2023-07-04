@@ -1,10 +1,11 @@
 name: line_icons
 description: Another icon library, based on Awesome Line Icons (by www.icons8.com) and with the help of FlutterIcon.com
-version: 2.0.1
+version: 2.0.2
+repository: https://github.com/galonsos
 homepage: https://github.com/galonsos
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.12.0"
 
 dependencies:
   flutter:
