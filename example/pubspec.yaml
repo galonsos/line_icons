@@ -8,9 +8,7 @@ environment:
   sdk: ">=2.15.0 <3.0.0"
 
 dependencies:
-  line_icons:
-    git:
-      url: https://github.com/galonsos/line_icons.git
+  line_icons: ^2.0.2
   flutter:
     sdk: flutter
   
