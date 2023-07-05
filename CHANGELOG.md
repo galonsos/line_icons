@@ -52,3 +52,8 @@ The first release was fine, but needed some fixes
 ## [2.0.1] - March, 9 2021
 
 * `readme.md` updated; I forgot to change the version in the header
+
+## [2.0.2] - July, 6 2023
+
+* `LineIcon` are now const constructors
+* `pubspec.yaml` is updated with GIT info (thanks to @git-elliot)

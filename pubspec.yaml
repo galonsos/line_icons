@@ -6,7 +6,7 @@ homepage: https://github.com/galonsos
 issue_tracker: https://github.com/galonsos/line_icons/issues
 
 environment:
-  sdk: ">=2.12.0"
+  sdk: ">=2.12.0 <4.0.0"
 
 dependencies:
   flutter:
