@@ -7732,7 +7732,7 @@ class LineIcons {
       IconData(0xF8E8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 
   /// Holds a map of <symbol name, icon data> pairs
-  static const Map<String, IconData> values = {
+  static const Map<String, IconData> values = const {
     'buildingAlt': buildingAlt,
     'mapAlt': mapAlt,
     'neutralFaceAlt': neutralFaceAlt,
