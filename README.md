@@ -1,4 +1,4 @@
-# LineIcons 2.0.1
+# LineIcons 2.0.2
 
 # Just another bunch of beautiful icons to use
 
@@ -24,9 +24,10 @@ Just in case you might be interested: [Null-safety](https://dart.dev/null-safety
 # Features
 
 * Null-safe package (SDK >= `2.12.0`)
+* Const constructors (`const icon = const LineIcon.tablet();` vs `final icon = LineIcon.tablet()`)
 * Flutterish icon names (*camelCase* names instead of *snake_case* ones)
 * `values` property is provided in LineIcons class to access `IconData` as a map. I.e., `Icon(LineIcons.values['code'])`. 
-* `byName` property is also available to access the `IconData` related to the icon name passed as parameter. I.e., `Icon(LineIcons.byName('desktop'))`.
+* `byName` getter is also available to access the `IconData` related to the icon name passed as parameter. I.e., `Icon(LineIcons.byName('desktop'))`.
 * `LineIcon` (singular) class is provided along `LineIcons` (plural), so you can spare some code using `LineIcon.tablet()` instead of `Icon(LineIcons.tablet)`.
 * `LineIcon` constructor parameters are the same as `Icon`'s, so you may customize a `LineIcon` instance the same way. I.e., `Icon(LineIcons.px500, color: Colors.red)` is equivalent to `LineIcon.px500(color: Colors.red)` (or `Icon(LineIcons.values['px500'], color: Colors.red)`).
 
@@ -67,7 +68,7 @@ Include `line_icons` in your `pubspec.yaml` file:
 dependencies:
   flutter:
     sdk: flutter
-  line_icons: ^2.0.0
+  line_icons: ^2.0.2
 ```
 
 If your IDE doesn't do it automatically, type:
@@ -90,7 +91,7 @@ Or choose a suitable constructor:
 ```dart
 import 'package:line_icons/line_icon.dart';
 ...
-Icon _icon = LineIcon.code();
+const Icon _icon = const LineIcon.code();
 ...
 ```
 
