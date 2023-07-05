@@ -56,4 +56,9 @@ The first release was fine, but needed some fixes
 ## [2.0.2] - July, 6 2023
 
 * `LineIcon` are now const constructors
-* `pubspec.yaml` is updated with GIT info (thanks to @git-elliot)
+* `pubspec.yaml` is updated with GIT info, thanks to @git-elliot
+
+## [2.0.3] - July, 6 2023
+
+* Mispelling correction: `alternateWineGlas` is now `alternateWineGlass`, although the `alternateWineGlas` icon remains for backward compatibility
+* Thanks to @lukehutch for the heads up

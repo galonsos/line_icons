@@ -21498,6 +21498,23 @@ class LineIcon extends Icon {
           textDirection: textDirection,
         );
 
+  /// Constructor for alternate_wine_glass icon
+  /// Name alternate_wine_glas turns into flutterish alternateWineGlass
+  const LineIcon.alternateWineGlass({
+    Key? key,
+    double? size,
+    Color? color,
+    String? semanticLabel,
+    TextDirection? textDirection,
+  }) : super(
+          LineIcons.alternateWineGlass,
+          key: key,
+          size: size,
+          color: color,
+          semanticLabel: semanticLabel,
+          textDirection: textDirection,
+        );
+
   /// Constructor for alternate_wine_glas icon
   /// Name alternate_wine_glas turns into flutterish alternateWineGlas
   const LineIcon.alternateWineGlas({

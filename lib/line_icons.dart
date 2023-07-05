@@ -6324,6 +6324,11 @@ class LineIcons {
   static const hangingWeight =
       IconData(0xF5CD, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 
+  /// Icon data for symbol originally named alternate_wine_glass
+  /// Name alternate_wine_glass turns into alternateWineGlass
+  static const alternateWineGlass =
+      IconData(0xF5CE, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+
   /// Icon data for symbol originally named alternate_wine_glas
   /// Name alternate_wine_glas turns into alternateWineGlas
   static const alternateWineGlas =
@@ -8996,7 +9001,8 @@ class LineIcons {
     'vectorSquare': vectorSquare,
     'weebly': weebly,
     'hangingWeight': hangingWeight,
-    'alternateWineGlas': alternateWineGlas,
+    'alternateWineGlas': alternateWineGlass,
+    'alternateWineGlass': alternateWineGlass,
     'wix': wix,
     'airFreshener': airFreshener,
     'fruitApple': fruitApple,
@@ -10545,6 +10551,7 @@ class LineIcons {
     'weebly': weebly,
     'hangingweight': hangingWeight,
     'alternatewineglas': alternateWineGlas,
+    'alternatewineglass': alternateWineGlass,
     'wix': wix,
     'airfreshener': airFreshener,
     'fruitapple': fruitApple,
