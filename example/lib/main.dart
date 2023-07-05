@@ -17,53 +17,49 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  MyHomePage({super.key, required this.title});
+  MyHomePage({
+    required this.title,
+  });
   final String title;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(title),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            Text(
-              'Awesome Line Icons are great!',
-            ),
-            Text(
-              'Version 2.0.0 goes null-safe!',
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Column(
-                  children: [
-                    // Using LineIcons the standard way: injecting the IconData into the Icon object
-                    Icon(LineIcons.desktop),
-                    Text('Icon(LineIcons.desktop, ...)'),
-                  ],
-                ),
-                Column(
-                  children: [
-                    // Using LineIcon (no 's') for concision. It returns an Icon object
-                    LineIcon.tablet(),
-                    Text('LineIcon.tablet(...)'),
-                  ],
-                ),
-                Column(
-                  children: [
-                    // Using LineIcons the nasty way: passing the IconData via the values map
-                    Icon(LineIcons.values['mobile']),
-                    Text('Icon(LineIcons.values[\'mobile\'], ...)'),
-                  ],
-                ),
-              ],
-            ),
-          ],
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text(
+            'Awesome Line Icons are great!',
+            style: Theme.of(context).textTheme.headlineLarge,
+          ),
+          Text(
+            'Version 2.0.2 constructors are const now!',
+            style: Theme.of(context).textTheme.headlineMedium,
+          ),
+          // Using LineIcons the standard way: injecting the IconData into the Icon object
+          const Icon(
+            LineIcons.desktop,
+          ),
+          Text(
+            'Icon(LineIcons.desktop, ...)',
+          ),
+          // Using LineIcon (no 's') for concision. It returns an Icon object
+          const LineIcon.tablet(),
+          Text(
+            'LineIcon.tablet(...)',
+          ),
+          // Using LineIcons the nasty way: passing the IconData via the values map
+          Icon(
+            LineIcons.values['mobilePhone'],
+          ),
+          Text(
+            'Icon(LineIcons.values[\'mobilePhone\'], ...)',
+          ),
+        ],
       ),
     );
   }

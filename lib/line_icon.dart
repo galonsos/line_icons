@@ -1,6 +1,13 @@
 import 'package:flutter/widgets.dart';
 import 'line_icons.dart';
 
+/// Class for a single `Icon` (not `IconData`), based on constructors.
+///
+/// For instance:
+/// `final Icon icon = LineIcon.mobilePhone();`
+///
+/// If you're looking for `IconData` instead of `Icon` objects, please see
+/// `LineIcons` class.
 class LineIcon extends Icon {
   /// General constructor
   /// Not intended to be used widely, but who knows. It may come at hand sometime

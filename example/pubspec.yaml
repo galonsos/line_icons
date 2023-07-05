@@ -1,15 +1,19 @@
 name: line_icons_demo
 description: A demo for the LineIcons library
+publish_to: none
 
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.15.0 <3.0.0"
 
 dependencies:
+  line_icons:
+    git:
+      url: https://github.com/galonsos/line_icons.git
   flutter:
     sdk: flutter
-  line_icons: ^2.0.1
+  
 
 dev_dependencies:
   flutter_test:
